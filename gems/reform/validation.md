@@ -109,7 +109,7 @@ The purest form of defining validations with this backend is by using a [validat
 
 Custom predicates have to be defined in the validation group. If you need access to your form you must add `option :form` to your configure block.
 
-    validation :default do
+    validation(name: :default, with: { form: true } ) do
       configure do
         option :form
 
@@ -123,7 +123,7 @@ Custom predicates have to be defined in the validation group. If you need access
 
 In addition to dry-validation's API, you have access to the form that contains the group via `form`.
 
-    validation :default do
+    validation(name: :default, with: { form: true } ) do
       configure do
         option :form
 
